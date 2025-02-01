@@ -1,108 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Privacy Policy</title>
     <style>
+        /* Base Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f4f4f9;
+            line-height: 1.6;
             color: #333;
         }
+
         .container {
-            max-width: 800px;
+            width: 90%;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+
         h1 {
-            color: #286248;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #15479E;
+            padding-left: 20px;
+            border-left: 5px solid #286248;
         }
-        h3{
-            background-color: #286248;
-            padding: 5px;
-            color: #FFFFFF;
-            border-radius: 5px;
-        }
-        h1 {
+
+        .subtitle {
             text-align: center;
+            font-size: 0.875rem;
+            color: #777;
+            margin-bottom: 30px;
         }
-        h4 {
-            margin:5px
+
+        .firstimg {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 0 auto;
         }
+
         p {
-            margin-left:10px;
-            margin-right:10px;
-            margin-bottom: 15px;
+            font-size: 0.875rem;
+            margin-bottom: 10px;
+            text-align: justify;
         }
-        .contact-info {
-            background-color: #e9ecef;
-            padding: 10px;
-            margin:10px;
-            border-radius: 5px;
+
+        .content-header {
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-top: 20px;
         }
+
+        .content-body {
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-card {
+            padding: 20px;
+            border-radius: 16px;
+            background-color: #FCFCFC;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .section-card img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .section-card h5 {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+        }
+
+        .section-card p {
+            font-size: 0.875rem;
+            color: #737373;
+        }
+
+        .card-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card-group .section-card {
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        /* Specific layout for sections 3 and 4 */
+        .row-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .row-layout .section {
+            flex: 1 1 calc(50% - 20px);
+        }
+
+        /* Specific layout for sections 5, 6, and 7 */
+        .three-column-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .three-column-layout .section {
+            flex: 1 1 calc(33.33% - 20px);
+        }
+
         .footer {
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+            margin-top: 50px;
+            font-size: 0.75rem;
+            color: #777;
+        }
+
+        .footer img {
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .card-group .section-card,
+            .row-layout .section,
+            .three-column-layout .section {
+                flex: 1 1 100%;
+            }
+
+            .firstimg {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.25rem;
+            }
+
+            .content-header {
+                font-size: 1rem;
+            }
+
+            .section-card h5 {
+                font-size: 1rem;
+            }
+
+            .section-card p {
+                font-size: 0.75rem;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer img {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
+
 <body>
-
 <div class="container">
-    <h1>Geo-Survey Privacy Policy</h1>
-    <p><strong>Effective Date: 18-09-2024</strong></p>
-
-    <h3>1. Introduction</h3>
-    <p>Welcome to Geo-Survey. We respect your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we handle your data when you use our app for geotagging trees and structures.</p>
-
-    <h3>2. Information We Collect and How We Use It</h3>
-
-    <h4>2.1 Location Data</h4>
-    <p>To provide accurate geotagging of trees and structures, Geo-Survey requires access to your precise location data. This is essential for tagging the correct geographical coordinates of the objects you survey.</p>
-
-    <h4>2.2 Data Retention</h4>
-    <p>We do not store or retain any personal user data apart from the geotagged information related to trees and structures. Once the tagging process is complete, we do not keep any location data or other personal information.</p>
-
-    <h4>2.3 Data Use</h4>
-    <p>Your location data is used in real-time solely for the purpose of geotagging trees and structures within the app. We do not use your location data for any other purposes.</p>
-
-    <h3>3. Data Sharing</h3>
-
-    <h4>3.1 No Third-Party Sharing</h4>
-    <p>We do not share your location data or any geotagged information with any third parties. Your data is used exclusively within the app to provide the services you request.</p>
-
-    <h3>4. Data Security</h3>
-    <p>We implement appropriate security measures to protect your geotagged data during its use. However, since we do not retain personal user data, there is no stored data that requires long-term security protection</p>
-
-    <h3>5. User Choices</h3>
-
-    <h4>5.1 Location Permissions</h4>
-    <p>You can control your device’s location settings at any time. If you choose to disable precise location services for Geo-Survey, you may not be able to accurately tag trees and structures, which may affect the functionality of the app.</p>
-
-    <h3>7. Contact Us</h3>
-    <div class="contact-info">
-        <p>For any questions or concerns regarding this Privacy Policy or our data practices, please contact us at:</p>
-        <p><strong>Email:</strong> info@bhugolgis.com </p>
-        <p><strong>Address:</strong> 702, C & B Square, Andheri - Kurla Rd, J B Nagar, Andheri East, Mumbai, Maharashtra 400 059, India.</p>
-        <p><strong>Phone:</strong> +91 7208090286</p>
+    <h1>Privacy Policy</h1>
+    <div class="subtitle">
+        <p>Effective Date: 18th September 2024</p>
+    </div>
+    <div>
+        <img src="/img/Security1.svg" alt="Security Icon" class="firstimg">
     </div>
 
-    <h3>8. Consent</h3>
-    <p>By using Geo-Survey, you consent to the use of your location data as described in this Privacy Policy.</p>
+    <div class="content-body">
+        <div class="section" style="background: #F3F6F3; padding: 20px; border-radius: 16px;">
+            <p class="content-header">1. Introduction</p>
+            <p>Welcome to Geo-Survey. We respect your privacy and are committed to safeguarding your personal
+                information. This Privacy Policy outlines how we handle your data when you use our app for
+                geotagging trees and structures.</p>
+        </div>
+
+        <p class="content-header">2. Information We Collect and How We Use It</p>
+        <div class="card-group">
+            <div class="section-card">
+                <img src="/img/locationdata.svg" alt="Location Data">
+                <h5>Location Data</h5>
+                <p>To provide accurate geotagging of trees and structures, Geo-Survey requires access to your
+                    precise location data. This is essential for tagging the correct geographical coordinates of
+                    the objects you survey.</p>
+            </div>
+
+            <div class="section-card">
+                <img src="/img/Data Storage.svg" alt="Data Retention">
+                <h5>Data Retention</h5>
+                <p>We do not store or retain any personal user data apart from the geotagged information
+                    related to trees and structures. Once the tagging process is complete, we do not keep any
+                    location data or other personal information.</p>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="section-card">
+                <img src="/img/mic.svg" alt="Microphone Access">
+                <h5>Microphone Access (RECORD_AUDIO)</h5>
+                <p>We request microphone access solely for voice search in the project search list, enabling
+                    users to search via voice commands. Audio input is processed in real-time for speech-to-text
+                    conversion and is neither stored, recorded, nor shared. It is discarded immediately after
+                    the search.</p>
+            </div>
+
+            <div class="section-card">
+                <img src="/img/db.svg" alt="Data Use">
+                <h5>Data Use</h5>
+                <p>Your location data is used in real-time solely for the purpose of geotagging trees and
+                    structures within the app. We do not use your location data for any other purposes.</p>
+            </div>
+        </div>
+
+        <!-- Sections 3 and 4 in a row on full screen -->
+        <div class="row-layout">
+            <div class="section">
+                <p class="content-header">3. Data Sharing</p>
+                <div class="section-card">
+                    <img src="/img/Databse2.svg" alt="No Third-Party Sharing">
+                    <h5>No Third-Party Sharing</h5>
+                    <p>We do not share your location data or any geotagged information with third parties. Your data is used exclusively within the app to provide the services you request.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <p class="content-header">4. Data Security</p>
+                <div class="section-card">
+                    <img src="/img/db2.svg" alt="Data Security">
+                    <h5>Data Security</h5>
+                    <p>We implement appropriate security measures to protect your geotagged data during its use. However, since we do not retain personal user data, there is no stored data that requires long-term security protection.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sections 5, 6, and 7 in a row on full screen -->
+        <div class="three-column-layout">
+            <div class="section">
+                <p class="content-header">5. User Choices</p>
+                <div class="section-card">
+                    <img src="/img/Location.svg" alt="User Choices">
+                    <h5>Location Permissions</h5>
+                    <p>You can control your device’s location settings at any time. If you choose to disable precise
+                        location services for Geo-Survey, you may not be able to accurately tag trees and structures,
+                        which may affect the functionality of the app.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <p class="content-header">6. Privacy Concerns</p>
+                <div class="section-card">
+                    <img src="/img/Layer 2.svg" alt="Contact Us">
+                    <h5>Contact Us</h5>
+                    <p>
+                        <b>Email:</b> info@bhugolgis.com<br>
+                        <b>Address:</b> 702, C & B Square, Andheri - Kurla Rd, J B Nagar, Andheri East, Mumbai,
+                        Maharashtra 400 059, India<br>
+                        <b>Phone:</b> +91 22 4605 4952
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <p class="content-header">7. Consent</p>
+                <div class="section-card">
+                    <img src="/img/document.svg" alt="Consent">
+                    <h5>Consent</h5>
+                    <p>By using Geo-Survey, you consent to the use of your location data as described in this Privacy Policy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="footer">
-        &copy; 2024 Geo-Survey. All rights reserved.
+        <p>Copyright &copy; 2025 Geo-Survey | All Rights Reserved</p>
+        <div>
+            <img src="/img/geo survey_3__4 copy 3.svg" alt="Geo Survey Logo">
+            <img src="/img/image 5.svg" alt="Partner Logo">
+        </div>
     </div>
 </div>
-
 </body>
+
 </html>
